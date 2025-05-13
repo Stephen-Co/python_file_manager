@@ -47,13 +47,13 @@ for file in file_path:
         if extension in pic_extensions:
                 shutil.move(filename, images_dir)
 
-        if extension in vid_extensions:
+        elif extension in vid_extensions:
                 shutil.move(filename, videos_dir)
 
-        if extension in docx_extensions:
+        elif extension in docx_extensions:
                 shutil.move(filename, documents_dir)
 
-        if extension in code_extensions:
+        elif extension in code_extensions:
                 shutil.move(filename, Code_dir)
 
         else: shutil.move(filename, Misc_dir)
