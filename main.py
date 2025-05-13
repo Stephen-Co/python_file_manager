@@ -7,7 +7,7 @@ file_path = os.listdir(path)
 # create destination folders and check if they already exist
 images_dir = "Pictures"
 videos_dir = "Videos"
-documents_dir ="Word/Excel Documents"
+documents_dir ="Documents"
 Code_dir = "Coding files"
  
 Misc_dir = "Miscallaneous"
