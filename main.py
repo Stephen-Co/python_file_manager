@@ -1,7 +1,8 @@
 import os
 import shutil
 
-file_path = os.getcwd()
+path = os.getcwd()
+file_path = os.listdir(path)
 
 # create destination folders and check if they already exist
 images_dir = "Pictures"
