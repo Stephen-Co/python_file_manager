@@ -8,11 +8,11 @@ images_dir = "Pictures"
 videos_dir = "Videos"
 documents_dir ="Word/Excel Documents"
 Code_dir = "Coding files"
+ 
 Misc_dir = "Miscallaneous"
 
 directories_list = [ images_dir, videos_dir, documents_dir, Code_dir, Misc_dir]
 
- 
 
 # Create the directory
 for x in directories_list:
@@ -33,4 +33,26 @@ docx_extensions =["docx", "doc", "xls", "xlsx", "ppt", "pptx", "csv","pdf"]
 code_extensions =["c", "py","r", "v"]
 
 
+
 #move files to destination
+
+
+
+for file in file_path:
+        filename = os.fsdecode(file)
+        extension = filename.split('.')[-1].lower()
+
+
+        if extension in pic_extensions:
+                shutil.move(filename, images_dir)
+
+        if extension in vid_extensions:
+                shutil.move(filename, videos_dir)
+
+        if extension in docx_extensions:
+                shutil.move(filename, documents_dir)
+
+        if extension in code_extensions:
+                shutil.move(filename, Code_dir)
+
+        else: shutil.move(filename, Misc_dir)
